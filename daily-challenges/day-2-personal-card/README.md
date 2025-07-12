@@ -1,5 +1,9 @@
 # Day 2 React Code Challenge
 
+## Codepen Link
+
+[Codepen](https://codepen.io/fitzk/pen/ByoyzYb)
+
 ## Description
 
 Create a personal card
