@@ -1,6 +1,16 @@
 import './App.css';
 
 
+/**
+ * PersonalCard is a React functional component that displays a personal profile card.
+ * It shows the user's avatar, name, age, location, profession, and a short bio.
+ *
+ * @component
+ * @example
+ * return (
+ *   <PersonalCard />
+ * )
+ */
 const PersonalCard = () => {
   const person = {
     name: "Ky Fitzgerald",
@@ -9,7 +19,7 @@ const PersonalCard = () => {
     avatar: 'https://placehold.co/150',
     profession: "WordPress Developer",
     bio: "Learning React and building personal projects."
-  };//this is an object with an array of my information for the personal card
+  };//this is an object with my information for the personal card
 
   return (
     <div className="personal-card">
