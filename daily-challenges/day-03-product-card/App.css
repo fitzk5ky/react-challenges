@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+
+* {
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: #2d3748;
+}
+
+/* card container styles */
+.personal-card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.personal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* header styles */
+.personal-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.avatar-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: border-color 0.3s ease;
+}
+
+.personal-card-info {
+  flex: 1;
+}
+
+.name {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  color: #000;
+}
+
+.profession,
+.location,
+.age,
+.bio {
+  margin: 0;
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+}
+
+/* media query */
+@media (max-width: 480px) {
+  .personal-card {
+    margin: 10px;
+    padding: 16px;
+  }
+  
+  .personal-card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .name {
+    font-size: 20px;
+  }
+}
