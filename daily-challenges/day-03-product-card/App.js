@@ -1,35 +1,43 @@
 import './App.css';
-import './index.css';
 
-//product card component
-const ProductCard = ({name, description, price}) => {
+
+/**
+ * PersonalCard is a React functional component that displays a personal profile card.
+ * It shows the user's avatar, name, age, location, profession, and a short bio.
+ *
+ * @component
+ * @example
+ * return (
+ *   <PersonalCard />
+ * )
+ */
+const PersonalCard = () => {
+  const person = {
+    name: "Ky Fitzgerald",
+    age: 34,
+    location: "New York",
+    avatar: 'https://placehold.co/150',
+    profession: "WordPress Developer",
+    bio: "Learning React and building personal projects."
+  };//this is an object with my information for the personal card
+
   return (
-    <div className="product-card bg-white shadow-lg rounded-lg p-6 max-w-sm">
-      <h2>{name}</h2>
-      <p>{description}</p>
-      <p>${price}</p>
+    <div className="personal-card">
+      {/*header section*/}
+      <header className="personal-card-header">
+        <img src={person.avatar} className="avatar-logo" alt={`${person.name}'s avatar`} />
+      </header>
+      {/*user info section*/}
+      <section className="personal-card-info">
+        <h2 className="name">{person.name}</h2>
+        <p className="age">Age: {person.age}</p>
+        <p className="location">Location: {person.location}</p>
+        <p className="profession">Profession: {person.profession}</p>
+        <p className="bio">Bio: {person.bio}</p>
+      </section>
+      
     </div>
   );
-}
+};
 
-//app component
-const App = () => {
-  const product = {
-    name: "Buck Mason T-Shirt",
-    description: "90s Boxy T-Shirt in denim blue with a pocket",
-    price: 88.00
-  };
-  return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
-      <h1 className="text-2xl font-bold text-center p-4">Product Showcase</h1>
-      <ProductCard
-        className=""
-        name={product.name}
-        description={product.description}
-        price={product.price}
-      />
-    </div>
-  );
-}
-
-export default App;
+export default PersonalCard;
